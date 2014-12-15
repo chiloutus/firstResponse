@@ -1,9 +1,11 @@
 package com.example.gradlebuild.app.util;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import com.example.gradlebuild.app.R;
 
 public class resultScreen extends ActionBarActivity {
@@ -11,7 +13,14 @@ public class resultScreen extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_screen2);
+        setContentView(R.layout.activity_results);
+        Intent intent = getIntent();
+        String RPM = intent.getStringExtra("VAR_RPM");
+        String SPEED = intent.getStringExtra("VAR_SPEED");
+        final TextView textViewToChange = (TextView) findViewById(R.id.rpm);
+        textViewToChange.setText(RPM);
+        final TextView textView = (TextView) findViewById(R.id.spd);
+        textView.setText(SPEED);
     }
 
 

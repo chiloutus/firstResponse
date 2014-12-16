@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="username" type="id">admin</item>
+    <item name="password" type="id">admin</item>
+    <item name="login" type="id">Login</item>
+    <item name="fl" type="id">Fuel Type:</item>
+    <item name="rpm" type="id">RPM:</item>
+    <item name="attempts" type="id"/>
+</resources>

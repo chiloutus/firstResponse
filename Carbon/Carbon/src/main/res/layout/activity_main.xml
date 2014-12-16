@@ -1,6 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" android:background="@drawable/carbon">
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
 
     <TextView
             android:id="@+id/textView1"
@@ -9,11 +12,9 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:text="@string/hello_world"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
             android:layout_alignBottom="@+id/textView2"
             android:layout_marginLeft="32dp"
             android:layout_toRightOf="@+id/textView2"
-            android:ems="10" android:textColor="@android:color/white">
+            android:ems="10" >
 
         <requestFocus />
     </EditText>
@@ -52,16 +53,17 @@
             android:layout_alignBottom="@+id/textView3"
             android:layout_alignLeft="@+id/editText1"
             android:ems="10"
-            android:inputType="textPassword" android:textColor="@android:color/white"/>
+            android:inputType="textPassword" />
 
     <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="78dp"
             android:onClick="login"
-            android:text="@string/Login" android:layout_below="@+id/textView4" android:layout_toRightOf="@+id/spd"
-            android:layout_toEndOf="@+id/spd"/>
+            android:text="@string/Login"
+            android:layout_toEndOf="@+id/spd" android:layout_below="@+id/textView4"
+            android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
 
     <TextView
             android:id="@+id/textView4"
@@ -75,7 +77,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-            android:id="@+id/spd"
+            android:id="@+id/attempts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/textView1"

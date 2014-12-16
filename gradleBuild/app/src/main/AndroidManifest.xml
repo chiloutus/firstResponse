@@ -12,14 +12,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".util.SplashPage"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.SplashPage" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="@string/app_name">
         </activity>
         <activity
             android:name=".util.resultScreen"
@@ -28,6 +21,11 @@
         <activity
             android:name=".util.Login"
             android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

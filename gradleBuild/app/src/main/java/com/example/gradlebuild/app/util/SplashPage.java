@@ -5,9 +5,13 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.ParcelUuid;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import com.example.gradlebuild.app.R;
@@ -28,12 +32,17 @@ import java.util.UUID;
 /**
  * Created by GaryPC on 04/11/2014.
  */
+
+
+
 public class SplashPage extends Activity {
-    String RPM = "";
+    String rpm = "";
     String speed = "";
     SplashPage v = this;
     String fuelType = "";
     private static final String TAG = "SplashPage";
+    // Default UUID
+    private UUID DEFAULT_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,12 +87,13 @@ public class SplashPage extends Activity {
 
                 UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
+
+
                 BluetoothSocket socket = null;
 
                 try {
                     socket = device.createInsecureRfcommSocketToServiceRecord(uuid);
                     socket.connect();
-
 
                     new EchoOffObdCommand().run(socket.getInputStream(), socket.getOutputStream());
 
@@ -100,7 +110,7 @@ public class SplashPage extends Activity {
                     while (!Thread.currentThread().isInterrupted()) {
                         engineRpmCommand.run(socket.getInputStream(), socket.getOutputStream());
                         speedCommand.run(socket.getInputStream(), socket.getOutputStream());
-                        RPM = engineRpmCommand.getFormattedResult();
+                        rpm = engineRpmCommand.getFormattedResult();
                         speed = speedCommand.getFormattedResult();
                         fuelType = fuelCommand.getFormattedResult();
 
@@ -118,7 +128,11 @@ public class SplashPage extends Activity {
                 }
 
                 Intent intent = new Intent(v, resultScreen.class);
-                intent.putExtra("Var_RPM", RPM);
+
+                rpm = "2000";
+                speed = "15Mph";
+                fuelType = "Petrol";
+                intent.putExtra("Var_RPM", rpm);
                 intent.putExtra("Var_Speed", speed);
                 intent.putExtra("Var_Fuel",fuelType);
                 startActivity(intent);
@@ -131,6 +145,12 @@ public class SplashPage extends Activity {
 
 
 
+    }
+
+
+    public void uploadButton(final View view){
+        Intent intent = new Intent(getApplicationContext(), RegisterUser.class);
+        startActivity(intent);
     }
 
 }

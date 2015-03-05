@@ -33,7 +33,7 @@ public class Login extends Activity {
 
     public void login(View view){
         if(username.getText().toString().equals("admin") &&
-                password.getText().toString().equals("admin")){
+            password.getText().toString().equals("admin")){
             Intent intent = new Intent(getApplicationContext(), SplashPage.class);
             startActivity(intent);
         }

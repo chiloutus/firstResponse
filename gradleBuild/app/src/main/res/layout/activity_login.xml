@@ -14,7 +14,7 @@
 
     <TextView
 
-            android:id="@+id/textView2"
+            android:id="@+id/lastnameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -27,20 +27,20 @@
             android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignBottom="@+id/lastnameText"
             android:layout_marginLeft="32dp"
-            android:layout_toRightOf="@+id/textView2"
+            android:layout_toRightOf="@+id/lastnameText"
             android:ems="10" android:textColor="@android:color/white">
 
         <requestFocus />
     </EditText>
 
     <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/passwdText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/lastnameText"
+            android:layout_below="@+id/lastnameText"
             android:layout_marginTop="38dp"
             android:text="@string/password"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -49,7 +49,7 @@
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignBottom="@+id/passwdText"
             android:layout_alignLeft="@+id/editText1"
             android:ems="10"
             android:inputType="textPassword" android:textColor="@android:color/white"/>
@@ -60,15 +60,15 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="57dp"
             android:onClick="login"
-            android:text="@string/Login" android:layout_below="@+id/textView4" android:layout_toRightOf="@+id/spd"
+            android:text="@string/Login" android:layout_below="@+id/passwd2Text" android:layout_toRightOf="@+id/spd"
             android:layout_toEndOf="@+id/spd"/>
 
     <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/passwd2Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/passwdText"
+            android:layout_below="@+id/passwdText"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="48dp"
             android:text="@string/attempts"
@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/textView1"
-            android:layout_alignTop="@+id/textView4"
+            android:layout_alignTop="@+id/passwd2Text"
             android:text="TextView" />
 
 

@@ -16,7 +16,7 @@ public class resultScreen extends ActionBarActivity {
         setContentView(R.layout.activity_results);
         Intent intent = getIntent();
         String RPM = intent.getStringExtra("Var_RPM");
-        String SPEED = intent.getStringExtra("Var_SPEED");
+        String SPEED = intent.getStringExtra("Var_Speed");
         String FUEL = intent.getStringExtra("Var_Fuel");
         final TextView textViewToChange = (TextView) findViewById(R.id.rpm);
         textViewToChange.setText(RPM);

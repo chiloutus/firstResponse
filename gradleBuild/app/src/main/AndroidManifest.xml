@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".util.SplashPage"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name=".util.resultScreen"
@@ -26,6 +28,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".util.RegisterUser"
+            android:label="@string/title_activity_register_user" >
         </activity>
     </application>
 
